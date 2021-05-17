@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="gbk">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>lol官网</title>
+    <link rel="stylesheet" type="text/css" href="lol.css" />
+    <style type="text/css">
+        #hero_style{
+            display: flex;
+            flex-direction: row;
+        }
+        #hero_style>li{
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(241,241,241,0.7);
+        }
+        #hero_style>li.active{
+            color: #364fcb;
+            background-color: white;
+        }
+        .part2-content-title{
+            width: 496px;
+            height: 40px;
+            font-size: 18px;
+            line-height: 40px;
+            text-align: center;
+            color: #4a84fa;
+            letter-spacing: 2px;
+        }
+        .part2-content-title:hover{
+            width: 496px;
+            height: 40px;
+            font-size: 18px;
+            line-height: 40px;
+            text-align: center;
+            color: #D2AA66;
+        }
+        .part2-content-content{
+            overflow: scroll;
+            overflow-x: hidden;
+            width: 496px;
+            height: 200px;
+        }
+        .new{
+            font-size: 8px;
+            height: 16px;
+            width: 32px;
+            text-align: center;
+            line-height: 14px;
+            color: white;
+            background-color: #D2AA66;
+            border-radius: 2px;
+            font-family: MicrosoftYaHei;
+        }
+        .notice{
+            font-size: 14px;
+            height: 18px;
+            width: 32px;
+            line-height: 16px;
+            text-align: center;
+            border: 1px #D2AA66 solid;
+            color: #D2AA66;
+            margin-top: 11px;
+            margin-left: 16px;
+        }
+        .part2-content-content-notice-word{
+            width: 360px;
+            font-size: 12px;
+            line-height: 40px;
+            color: #333333;
+            letter-spacing: 1px;
+            margin-left: 16px;
+        }
+        .part2-content-content-notice-word:hover{
+            width: 360px;
+            font-size: 12px;
+            line-height: 40px;
+            color: #D2AA66;
+            letter-spacing: 1px;
+            margin-left: 16px;
+        }
+        .part2-content-content-new-word{
+            width: 360px;
+            font-size: 12px;
+            line-height: 40px;
+            color: #333333;
+            letter-spacing: 1px;
+            margin-left: 16px;
+        }
+        .part2-content-content-new-word:hover{
+            width: 360px;
+            font-size: 12px;
+            line-height: 40px;
+            color: #4a84fa;
+            margin-left: 16px;
+        }
+        .part2-content-content-video-word{
+            width: 360px;
+            font-size: 12px;
+            line-height: 40px;
+            color: #333333;
+            letter-spacing: 1px;
+            margin-left: 16px;
+        }
+        .part2-content-content-video-word:hover{
+            width: 360px;
+            font-size: 12px;
+            line-height: 40px;
+            color: #BAA078;
+            letter-spacing: 1px;
+            margin-left: 16px;
+        }
+        .part2-content-content-date{
+            font-size: 12px;
+            /*margin-left: 48px;*/
+            color: #333333;
+            letter-spacing: 2px;
+            line-height: 40px;
+        }
+        .video{
+            font-size: 14px;
+            height: 18px;
+            width: 32px;
+            line-height: 16px;
+            text-align: center;
+            border: 1px #BAA078 solid;
+            color: #BAA078;
+            margin-top: 11px;
+            margin-left: 16px;
+        }
+        .news{
+            font-size: 14px;
+            height: 18px;
+            width: 32px;
+            line-height: 16px;
+            text-align: center;
+            background-color: white;
+            border: 1px #4a84fa solid;
+            color: #4a84fa;
+            margin-top: 11px;
+            margin-left: 16px;
+        }
+        .part6-content-video{
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" type="text/css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" type="text/javascript"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="lol">
+    <!--lol官网页头 start-->
+    <div class="lol_head_background">
+        <div class="lol_head">
+            <img src="./icon_lol/icon_ad.jpg" class="icon_ad">
+            <!--操作-->
+            <div class="lol_head_content">
+                <!--英雄昂联盟图标-->
+                <img src="./icon_lol/logo_public.png" class="logo_public l"/>
+                <!--游戏资料、商城/合作、社区互动、赛事官网、自助系统-->
+                <div class="dropdown l">
+                    <div class="dropbtn">
+                        <div class="lol_head_nav l" style="width: 770px">
+                            <span class="catalog_style l">
+                                <span class="catalog_title">游戏资料</span><br>
+                                <span class="catalog_subtitle">GAME INFO</span>
+                            </span>
+                            <span class="catalog_style l ui_mar_left_24">
+                                <span class="catalog_title">商城/合作</span><br>
+                                <span class="catalog_subtitle">STORE</span>
+                            </span>
+                            <span class="catalog_style l ui_mar_left_24">
+                                <span class="catalog_title">社区互动</span><br>
+                                <span class="catalog_subtitle">COMMUNITY</span>
+                            </span>
+                            <span class="catalog_style l ui_mar_left_24">
+                                <span class="catalog_title">赛事官网</span><br>
+                                <span class="catalog_subtitle">ESPORTS</span>
+                            </span>
+                            <span class="catalog_style l ui_mar_left_24">
+                                <span class="catalog_title">自助系统</span><br>
+                                <span class="catalog_subtitle">SYSTEM</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div href="#">
+                            <div class="l" style="margin-left: 175px">游戏下载</div>
+                            <div class="l" style="margin-left: 56px">点券充值</div>
+                            <div class="l" style="margin-left: 56px">视频中心</div>
+                            <div class="l" style="margin-left: 58px">lpl职业联赛</div>
+                            <div class="l" style="margin-left: 54px">联系客服</div>
+                        </div>
+                        <div href="#" style="clear:both;">
+                            <div class="l" style="margin-left: 175px">新手指引</div>
+                            <div class="l" style="margin-left: 56px">道聚城</div>
+                            <div class="l" style="margin-left: 72px">官方微信</div>
+                            <div class="l" style="margin-left: 58px">ldl发展联赛</div>
+                            <div class="l" style="margin-left: 54px">转区系统</div>
+                        </div>
+                    </div>
+                </div>
+                <!--搜查、登录-->
+                <div class="r lol_login">
+                    <img class="login_search l" src="./icon_lol/icon_search.png">
+                    <img class="login_phone l" src="./icon_lol/icon_phone.jpg">
+                    <img class="img_default l" src="./icon_lol/default.png">
+                    <div class="r catalog_title" style="line-height: 78px;margin-right: 2px">亲爱的召唤师，欢迎登录</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--lol官网页头 end-->
+
+    <!--首页内容 start-->
+    <div class="home_content ui_mar_top_40">
+        <!--part1 滚动窗口 part2 综合-->
+        <div class="part" style="height: 340px">
+            <!--part1 滚动窗口-->
+            <div class="ui_mar_left_10 l" id="part1">
+                <!--滚动内容-->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./icon_lol/img_part1/MSI助威宝典.jpg" class="img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./icon_lol/img_part1/光明与黑暗.jpg" class="img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./icon_lol/img_part1/小组赛.jpg" class="img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./icon_lol/img_part1/OWG限定皮肤.jpg" class="img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./icon_lol/img_part1/2021LPL裁判招募.jpg" class="img">
+                        </div>
+                    </div>
+                    <!--滚动内容目录-->
+                    <div id="part1_catalog">
+                        <span class="active">MSI助威宝典</span>
+                        <span>大魔王的宝藏</span>
+                        <span>MSI小组赛赛程</span>
+                        <span>DWG限定皮肤</span>
+                        <span>2021LPL裁判招募</span>
+                    </div>
+                </div>
+            </div>
+            <!--part2 综合-->
+            <div class="part2 ui_mar_right_10 r">
+                <!--公告、赛事。攻略-->
+                <div class="part2_catalog" id="part2">
+                    <span class="catalog_title1" tabindex="0">综合</span>
+                    <span class="catalog_title1" tabindex="1">公告</span>
+                    <span class="catalog_title1" tabindex="2">赛事</span>
+                    <span class="catalog_title1" tabindex="3">攻略</span>
+                    <span class="catalog_title1" tabindex="4">社区</span>
+                </div>
+                <!--具体内容-->
+                <div class="part2">
+                    <!--综合-->
+                    <div class="part2-content" tabindex="0" style="display: block">
+                        <div class="part2-content-title">11.10版本更新公告野区迎来重大改动 命运之...</div>
+                        <div class="part2-content-content">
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="notice l">公告</div>
+                                <div class="part2-content-content-notice-word l">11.10云顶之弈版本更新公告</div>
+                                <div class="part2-content-content-date l">05-12</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="video l">视频</div>
+                                <div class="part2-content-content-video-word l">英雄联盟首部动画剧集《Arcane》先导预告发布</div>
+                                <div class="part2-content-content-date l">05-04</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="notice l">新闻</div>
+                                <div class="part2-content-content-notice-word l">MSI助威宝典，升级宝典解锁海量奖品</div>
+                                <div class="part2-content-content-date l">04-30</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="video l">视频</div>
+                                <div class="part2-content-content-video-word l">MSI对抗赛将启 六强集结谁能实现许下的诺言？</div>
+                                <div class="part2-content-content-date l">05-13</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="notice l">公告</div>
+                                <div class="part2-content-content-notice-word l">2021年5月13日 不停机更新公告</div>
+                                <div class="part2-content-content-date l">05-13</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="notice l">公告</div>
+                                <div class="part2-content-content-notice-word l">蓝色精萃商店限时开启</div>
+                                <div class="part2-content-content-date l">05-12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--公告-->
+                    <div class="part2-content" tabindex="1">
+                        <div class="part2-content-title">11.10版本更新公告野区迎来重大改动 命运之...</div>
+                        <div class="part2-content-content">
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="notice l">公告</div>
+                                <div class="part2-content-content-notice-word l">11.10云顶之弈版本更新公告</div>
+                                <div class="part2-content-content-date l">05-12</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="notice l">新闻</div>
+                                <div class="part2-content-content-notice-word l">MSI助威宝典，升级宝典解锁海量奖品</div>
+                                <div class="part2-content-content-date l">04-30</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="notice l">公告</div>
+                                <div class="part2-content-content-notice-word l">2021年5月13日 不停机更新公告</div>
+                                <div class="part2-content-content-date l">05-13</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="news l">新闻</div>
+                                <div class="part2-content-content-new-word l">5月14日免费英雄更新公告</div>
+                                <div class="part2-content-content-date l">05-12</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="notice l">公告</div>
+                                <div class="part2-content-content-notice-word l">蓝色精萃商店限时开启</div>
+                                <div class="part2-content-content-date l">05-12</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="notice l">公告</div>
+                                <div class="part2-content-content-notice-word l">命运之子皮肤即将上线</div>
+                                <div class="part2-content-content-date l">05-12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--赛事-->
+                    <div class="part2-content" tabindex="2">
+                        <div class="part2-content-title">选手靠谱时刻：多赛区解说看RNG激情偷家</div>
+                        <div class="part2-content-content">
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="video l">视频</div>
+                                <div class="part2-content-content-video-word l">赛游研究所第2期：盲僧化身单线霸主再登赛场 </div>
+                                <div class="part2-content-content-date l">05-15</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="news l">赛事</div>
+                                <div class="part2-content-content-new-word l">2021MSI对抗赛特邀解说嘉宾团，明星选手亮相解说席</div>
+                                <div class="part2-content-content-date l">05-14</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="video l">视频</div>
+                                <div class="part2-content-content-video-word l">《高能软泥怪》2021MSI小组赛：“尝试一些新的东西” </div>
+                                <div class="part2-content-content-date l">05-13</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="video l">视频</div>
+                                <div class="part2-content-content-video-word l">赛游研究所第1期：莫甘娜为何能横行野区？ </div>
+                                <div class="part2-content-content-date l">05-13</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="video l">视频</div>
+                                <div class="part2-content-content-video-word l">MSI对抗赛将启 六强集结谁能实现许下的诺言？</div>
+                                <div class="part2-content-content-date l">05-13</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="video l">视频</div>
+                                <div class="part2-content-content-video-word l">【御剑飞行RNG，破晓而出定胜局】打Call全靠一支笔！...</div>
+                                <div class="part2-content-content-date l">05-12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--攻略-->
+                    <div class="part2-content" tabindex="3">
+                        <div class="part2-content-title">前期如何轻松十连胜？云顶王者教你运营技巧！</div>
+                        <div class="part2-content-content">
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="news l">新闻</div>
+                                <div class="part2-content-content-new-word l">【三笠】青钢影教父一脚千血！青钢影全方位大型攻略 </div>
+                                <div class="part2-content-content-date l">05-14</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="news l">新闻</div>
+                                <div class="part2-content-content-new-word l">【龙研京一】韩服第一德莱文教你打穿下路</div>
+                                <div class="part2-content-content-date l">05-11</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="video l">视频</div>
+                                <div class="part2-content-content-video-word l">云顶S5：破败爆击真伤流薇恩！两星锁血，吃分如饮水...</div>
+                                <div class="part2-content-content-date l">05-09</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="video l">视频</div>
+                                <div class="part2-content-content-video-word l">【浩子菌】极地大乱斗制胜攻略第四篇，法师位玩法...</div>
+                                <div class="part2-content-content-date l">05-07</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="video l">视频</div>
+                                <div class="part2-content-content-video-word l">新版本冷门强势套路三合一，五一开黑必玩之选</div>
+                                <div class="part2-content-content-date l">04-29</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="video l">视频</div>
+                                <div class="part2-content-content-video-word l">云顶之巅：卡尔玛连珠炮塔，乐芙兰无限锁链！神超 S5...</div>
+                                <div class="part2-content-content-date l">04-29</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--社区-->
+                    <div class="part2-content" tabindex="4">
+                        <div class="part2-content-title">【征服者 贾克斯】剪纸制作 祝RNG旗开得胜</div>
+                        <div class="part2-content-content">
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="video l">视频</div>
+                                <div class="part2-content-content-video-word l">【联盟简史】第21期丨荒漠屠夫 · 雷克顿丨失去神格的...</div>
+                                <div class="part2-content-content-date l">05-14</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="news l">娱乐</div>
+                                <div class="part2-content-content-new-word l">《简笔画联盟》应玩家要求的特别版亚索 你学会了吗?</div>
+                                <div class="part2-content-content-date l">05-13</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="video l">视频</div>
+                                <div class="part2-content-content-video-word l">【英雄联盟宇宙】恶魔畏惧的到底是什么？永恩面具...</div>
+                                <div class="part2-content-content-date l">05-13</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="video l">视频</div>
+                                <div class="part2-content-content-video-word l">用手机画一个像素风简单小动画...</div>
+                                <div class="part2-content-content-date l">05-07</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="video l">视频</div>
+                                <div class="part2-content-content-video-word l">新版本冷门强势套路三合一，五一开黑必玩之选...</div>
+                                <div class="part2-content-content-date l">04-29</div>
+                            </div>
+                            <div class="game-schedule-content-row" style="height: 40px">
+                                <div class="video l">视频</div>
+                                <div class="part2-content-content-video-word l">云顶之巅：卡尔玛连珠炮塔，乐芙兰无限锁链！神超...</div>
+                                <div class="part2-content-content-date l">04-29</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--阅读更多更新资讯-->
+                <div class="part2_subcatalog">阅读更多更新资讯</div>
+            </div>
+        </div>
+        <!--part3 热门活动 part4 下载游戏、领取中心、新手必备等-->
+        <div class="part" style="clear: both;height: 335px">
+            <!--part3 热门活动-->
+            <div class="part3 ui_mar_left_10 l" >
+                <div class="catalog" id="act">
+                    <span class="line_sign l"></span>
+                    <span class="word_sign">热门活动</span>
+                    <span class="catalog_title1 ui_mar_left_24" tabindex="0">正在进行</span>
+                    <span class="catalog_title1 ui_mar_left_30" tabindex="1">商城特惠</span>
+                    <span class="catalog_title1 ui_mar_left_30" tabindex="2">长期活动</span>
+                    <span class="catalog_subtitle1 ui_mar_left_256">更多</span>
+                </div>
+                <div class="act">
+                    <div class="act-content" tabindex="0" style="display: block">
+                        <div class="l">
+                            <img src="./icon_lol/gewen.jpg" class="img_act"><br>
+                            <div class="ui_mar_left_10 act_word1">格温毛绒玩偶预定</div>
+                            <div class="ui_mar_top_20 ui_mar_left_10 l act_word2">16天后结束</div>
+                            <div class="ui_mar_top_20 new r ui_mar_right_10">NEW</div>
+                        </div>
+                        <div class="l ui_mar_left_8">
+                            <img src="./icon_lol/img_part1/2021LPL裁判招募.jpg" class="img_act"><br>
+                            <div class="ui_mar_left_10 act_word1">2021LPL裁判招募开启</div>
+                            <div class="ui_mar_top_20 ui_mar_left_10 l act_word2">21天后结束</div>
+                            <div class="ui_mar_top_20 new r ui_mar_right_10">NEW</div>
+                        </div>
+                        <div class="l ui_mar_left_8">
+                            <img src="./icon_lol/xiaoyingxiong.jpg" class="img_act"><br>
+                            <div class="ui_mar_left_10 act_word1">云顶预约福利领取</div>
+                            <div class="ui_mar_top_20 ui_mar_left_10 l act_word2">13天后结束</div>
+                        </div>
+                        <div class="l ui_mar_left_8">
+                            <img src="./icon_lol/icon_ad.jpg" class="img_act"><br>
+                            <div class="ui_mar_left_10 act_word1">云顶之弈：光明与黑暗</div>
+                            <div class="ui_mar_top_20 ui_mar_left_10 l act_word2">17天后结束</div>
+                        </div>
+                    </div>
+                    <div class="act-content" tabindex="1">
+                        <div class="l">
+                            <img src="./icon_lol/zhandui.jpg" class="img_act"><br>
+                            <div class="ui_mar_left_10 act_word1">战队皮肤限时销售</div>
+                            <div class="ui_mar_top_20 ui_mar_left_10 l act_word2">15天后结束</div>
+                        </div>
+                        <div class="l ui_mar_left_8">
+                            <img src="./icon_lol/img_part1/MSI助威宝典.jpg" class="img_act"><br>
+                            <div class="ui_mar_left_10 act_word1">MSI助威宝典</div>
+                            <div class="ui_mar_top_20 ui_mar_left_10 l act_word2">12天后结束</div>
+                        </div>
+                        <div class="l ui_mar_left_8">
+                            <img src="./icon_lol/banjiapifu.jpg" class="img_act"><br>
+                            <div class="ui_mar_left_10 act_word1">全场半价</div>
+                            <div class="ui_mar_top_20 ui_mar_left_10 l act_word2">已结束</div>
+                        </div>
+                        <div class="l ui_mar_left_8">
+                            <img src="./icon_lol/remenyingxiong.jpg" class="img_act"><br>
+                            <div class="ui_mar_left_10 act_word1">热门英雄手办回馈</div>
+                            <div class="ui_mar_top_20 ui_mar_left_10 l act_word2">已结束</div>
+                        </div>
+                    </div>
+                    <div class="act-content" tabindex="2">
+                        <div class="l">
+                            <img src="./icon_lol/miwu.jpg" class="img_act"><br>
+                            <div class="ui_mar_left_10 act_word1">寻找破败的起源</div>
+                            <div class="ui_mar_top_20 ui_mar_left_10 l act_word2">长期活动</div>
+                        </div>
+                        <div class="l ui_mar_left_8">
+                            <img src="./icon_lol/shuijingmeigui.jpg" class="img_act"><br>
+                            <div class="ui_mar_left_10 act_word1">水晶玫瑰&幽梦玫瑰</div>
+                            <div class="ui_mar_top_20 ui_mar_left_10 l act_word2">长期活动</div>
+                        </div>
+                        <div class="l ui_mar_left_8">
+                            <img src="./icon_lol/xiaguzhidian.jpg" class="img_act"><br>
+                            <div class="ui_mar_left_10 act_word1">【峡谷之巅】招募令</div>
+                            <div class="ui_mar_top_20 ui_mar_left_10 l act_word2">长期活动</div>
+                        </div>
+                        <div class="l ui_mar_left_8">
+                            <img src="./icon_lol/KDA.jpg" class="img_act"><br>
+                            <div class="ui_mar_left_10 act_word1">K/DA系列 小小英雄</div>
+                            <div class="ui_mar_top_20 ui_mar_left_10 l act_word2">长期活动</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--part4 下载游戏、领取中心、新手必备等-->
+            <div class="part4 ui_mar_right_10 r">
+                <div class="caozuo">
+                    <!--下载游戏-->
+                    <img src="./icon_lol/download_game.png" class="img_download l">
+                    <!--新手必备、领取中心-->
+                    <div class="r">
+                        <img src="./icon_lol/img_newer.jpg" class="img_newer"><br>
+                        <img src="./icon_lol/img_center.jpg " class="img_center">
+                    </div>
+                </div>
+                <!--在线客服等-->
+                <div class="part4_sub" style="clear: both;">
+                    <span class="part4_sub_content">在线客服</span>
+                    <span class="part4_sub_content">秩序殿堂</span>
+                    <span class="part4_sub_content">游戏资料</span>
+                    <span class="part4_sub_content">峡谷之巅</span>
+                    <span class="part4_sub_content">云顶之弈</span>
+                    <span class="part4_sub_content">攻略中心</span>
+                    <span class="part4_sub_content">LOL宇宙</span>
+                    <span class="part4_sub_content">微信绑定</span>
+                </div>
+            </div>
+        </div>
+        <!--part5 皮肤、英雄-->
+        <div class="part5">
+            <!--新皮肤、新英雄-->
+            <div class="part5_left l">
+                <img src="./icon_lol/img_new_hero.png" class="img_new_hero l">
+                <img src="./icon_lol/img_new_skin.jpg" class="img_new_skin r">
+            </div>
+            <!--系列-->
+            <div class="part5_right r">
+                <div class="part5_right_left l">
+                    <img src="./icon_lol/DWG.jpg" class="img_dwg"><br>
+                    <img src="./icon_lol/CG.jpg" class="img_dwg ui_mar_top_6">
+                </div>
+                <div class="part5_right_right r">
+                    <img src="./icon_lol/img_gewen.png" class="img_gewen"><br>
+                    <div class="part5_right_right_bottom">
+                        周免
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--part6 最新视频 part7 热门专辑-->
+        <div class="part" style="height: 335px;background-color: #e3e2e2">
+            <!--part6 最新视频-->
+            <div class="part6 ui_mar_left_10 l">
+                <div class="catalog" id="part6">
+                    <span class="line_sign l"></span>
+                    <span class="word_sign">最新视频</span>
+                    <span class="catalog_title1 ui_mar_left_24" tabindex="0">推荐</span>
+                    <span class="catalog_title1 ui_mar_left_30" tabindex="1">官方</span>
+                    <span class="catalog_title1 ui_mar_left_30" tabindex="2">娱乐</span>
+                    <span class="catalog_title1 ui_mar_left_30" tabindex="3">赛事</span>
+                    <span class="catalog_title1 ui_mar_left_30" tabindex="4">云顶之弈<span class="new">new</span></span>
+                    <span class="catalog_title1 ui_mar_left_30" tabindex="5">教学</span>
+                    <span class="catalog_subtitle1 l ui_mar_left_30">下一页</span>
+                </div>
+                <div class="part6-content">
+                    <div class="part6-content-video" tabindex="0" style="display: block"></div>
+                </div>
+            </div>
+            <!--part7 热门专辑-->
+            <div class="part7 r ui_mar_right_10">
+                <div class="title">
+                    <span class="line_sign l"></span>
+                    <span class="word_sign">热门专辑</span>
+                    <span class="catalog_title1 ui_mar_left_10">周一</span>
+                    <span class="catalog_title1 ui_mar_left_10">周二</span>
+                    <span class="catalog_title1 ui_mar_left_10">周三</span>
+                    <span class="catalog_title1 ui_mar_left_10">周四</span>
+                    <span class="catalog_title1 ui_mar_left_10">周五</span>
+                    <span class="catalog_title1 ui_mar_left_10">周六</span>
+                    <span class="catalog_title1 ui_mar_left_10">周日</span>
+                </div>
+            </div>
+        </div>
+        <!--part8 赛事中心 part9 2021季中冠军赛-->
+        <div class="part" style="clear: both;height: 335px">
+            <div class="part8 ui_mar_left_10 l">
+                <div class="catalog" id="tabs">
+                    <span class="line_sign l"></span>
+                    <span class="word_sign">最新视频</span>
+                    <span class="part8_catalog_title1" style="margin-left: 24px" tabindex="0">小组赛</span>
+                    <span class="part8_catalog_title1 ui_mar_left_30" tabindex="1">对抗赛</span>
+                    <span class="part8_catalog_title1 ui_mar_left_30" tabindex="2">淘汰赛</span>
+                </div>
+                <div class="game">
+                    <div class="tabs-content" tabIndex="0" id="game" style="display: block">
+                        <span tabIndex="0" class="day l">第一天</span>
+                        <span tabIndex="1" class="day l">第二天</span>
+                        <span tabIndex="2" class="day l">第三天</span>
+                        <span tabIndex="3" class="day l">第四天</span>
+                        <span tabIndex="4" class="day l">第五天</span>
+                        <span tabIndex="5" class="day l">第六天</span><br><br>
+                        <div class="game-schedule" tabIndex="0" style="display: block">
+                            <div class="game-schedule-content">
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">DFN</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">CGG</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">GNE</span>
+                                        <span class="game-over-member-number ui_mar_left_32">0</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">1</span>
+                                        <span class="ui_mar_left_30">MAD</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">GNP</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">1</span>
+                                        <span class="ui_mar_left_30">IEE</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-schedule" tabIndex="1">
+                            <div class="game-schedule-content">
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-08 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-08 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">DFN</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">CGG</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-09 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">GNE</span>
+                                        <span class="game-over-member-number ui_mar_left_32">0</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">1</span>
+                                        <span class="ui_mar_left_30">MAD</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-08 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">GNP</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">1</span>
+                                        <span class="ui_mar_left_30">IEE</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-schedule" tabIndex="2">
+                            <div class="game-schedule-content">
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">DFN</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">CGG</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">GNE</span>
+                                        <span class="game-over-member-number ui_mar_left_32">0</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">1</span>
+                                        <span class="ui_mar_left_30">MAD</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">GNP</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">1</span>
+                                        <span class="ui_mar_left_30">IEE</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-schedule" tabIndex="3">
+                            <div class="game-schedule-content">
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">DFN</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">CGG</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">GNE</span>
+                                        <span class="game-over-member-number ui_mar_left_32">0</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">1</span>
+                                        <span class="ui_mar_left_30">MAD</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">GNP</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">1</span>
+                                        <span class="ui_mar_left_30">IEE</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-schedule" tabIndex="4">
+                            <div class="game-schedule-content">
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">DFN</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">CGG</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">GNE</span>
+                                        <span class="game-over-member-number ui_mar_left_32">0</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">1</span>
+                                        <span class="ui_mar_left_30">MAD</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">GNP</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">1</span>
+                                        <span class="ui_mar_left_30">IEE</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-schedule" tabIndex="5">
+                            <div class="game-schedule-content">
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">DFN</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">CGG</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">GNE</span>
+                                        <span class="game-over-member-number ui_mar_left_32">0</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">1</span>
+                                        <span class="ui_mar_left_30">MAD</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-over l">已结束</div>
+                                    <div class="game-over-time l">5-07 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">GNP</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">1</span>
+                                        <span class="ui_mar_left_30">IEE</span>
+                                    </div>
+                                    <div class="game-over-data l">数据</div>
+                                    <div class="game-over-video l">视频</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-content" tabIndex="1" id="competition">
+                        <span tabIndex="6" class="day l">第一天</span>
+                        <span tabIndex="7" class="day l">第二天</span>
+                        <span tabIndex="8" class="day l">第三天</span>
+                        <span tabIndex="9" class="day l">第四天</span>
+                        <span tabIndex="10" class="day l">第五天</span><br><br>
+                        <div class="game-schedule" tabIndex="6" style="display: block">
+                            <div class="game-schedule-content">
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-10 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-10 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-10 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-10 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-schedule" tabindex="7">
+                            <div class="game-schedule-content">
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-11 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-10 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-10 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-10 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-schedule" tabindex="8">
+                            <div class="game-schedule-content">
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-12 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-12 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-12 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-12 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-schedule" tabindex="9">
+                            <div class="game-schedule-content">
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-12 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-12 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-12 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-12 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-schedule" tabindex="10">
+                            <div class="game-schedule-content">
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-14 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-12 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-12 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                                <div class="game-schedule-content-row">
+                                    <div class="game-start l">未开始</div>
+                                    <div class="game-over-time l">5-12 23:00</div>
+                                    <div class="game-over-member l ui_mar_top_12">
+                                        <span class="ui_mar_left_30">RNG</span>
+                                        <span class="game-over-member-number ui_mar_left_32">1</span>
+                                        <span class="colon-style">:</span>
+                                        <span class="game-over-member-number ui_mar_left_8">0</span>
+                                        <span class="ui_mar_left_30">UOL</span>
+                                    </div>
+                                    <div class="game-future-start l">敬请期待</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-content" tabindex="2">
+                        <span class="final l">半决赛</span>
+                        <span class="final1 l">BO5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="part9 r">
+                <div class="catalog_title1 r ui_mar_right_24">更多</div>
+                <div class="catalog_title1 r ui_mar_right_30">2021季中冠军赛</div>
+            </div>
+        </div>
+        <!--part9 英雄资料-->
+        <div class="part" style="height: 340px">
+            <div id="hero" class="l ui_mar_left_10">
+                <!--目录栏-->
+                <div class="line_sign l"></div>
+                <div class="word_sign l">英雄资料</div>
+                <ul id="hero_style">
+                    <li class="active catalog_title1 ui_mar_left_24 l">所有英雄</li>
+                    <li class="catalog_title1 ui_mar_left_30 l">战士</li>
+                    <li class="catalog_title1 ui_mar_left_30 l">法师</li>
+                    <li class="catalog_title1 ui_mar_left_30 l">刺客</li>
+                    <li class="catalog_title1 ui_mar_left_30 l">坦克</li>
+                    <li class="catalog_title1 ui_mar_left_30 l">射手</li>
+                    <li class="catalog_title1 ui_mar_left_30 l">辅助</li>
+                </ul>
+            </div>
+        </div>
+        <!--part10 FANART创作馆-->
+        <div class="part" style="height: 420px">
+            <div class="part10 l ui_mar_left_10">
+                <div class="catalog">
+                    <div class="line_sign l"></div>
+                    <div class="word_sign l">FANART创作馆</div>
+                    <div class="catalog_subtitle1 l" style="margin-left: 580px">更多</div>
+                </div>
+                <div class="part10-content ui_mar_top_20">
+                    <img src="./icon_lol/neeko.jpg" class="part10_img_left l ui_mar_left_8">
+                    <img src="./icon_lol/annie.jpg" class="part10_img_left l ui_mar_left_16">
+                    <img src="./icon_lol/lulu.jpg" class="part10_img_left l ui_mar_left_16">
+                    <img src="./icon_lol/kasha.jpg" class="part10_img_left l ui_mar_left_16">
+                    <img src="./icon_lol/jie.jpg" class="part10_img_left l ui_mar_left_8 ui_mar_top_12" style="clear:left">
+                    <img src="./icon_lol/timo.jpg" class="part10_img_left l ui_mar_left_16 ui_mar_top_12">
+                    <img src="./icon_lol/nvdi.jpg" class="part10_img_left l ui_mar_left_16 ui_mar_top_12">
+                    <img src="./icon_lol/ruian.jpg" class="part10_img_left l ui_mar_left_16 ui_mar_top_12">
+                </div>
+            </div>
+            <div class="part11 r ui_mar_right_10">
+                <img src="./icon_lol/jiaoniyizhao.jpg" class="l part11_img_left">
+                <div class="part11_right r">
+                    <img src="./icon_lol/lol_user_investigation.jpg" class="part11_img_right ui_mar_top_40"><br>
+                    <img src="./icon_lol/lol_history.jpg" class="part11_img_right ui_mar_top_12"><br>
+                    <img src="./icon_lol/lol_exhibition.jpg" class="part11_img_right ui_mar_top_12"><br>
+                    <div class="media">
+                        <div class="media-dropbtn">合作媒体</div>
+                        <div class="media-content">
+                            <div href="#">兔玩</div>
+                            <div href="#">特玩</div>
+                            <div href="#">T-rex</div>
+                            <div href="#">大电竞</div>
+                            <div href="#">虎扑电竞</div>
+                            <div href="#">大咖</div>
+                            <div href="#">多玩</div>
+                            <div href="#">玩加电竞</div>
+                            <div href="#">伐木累</div>
+                            <div href="#">捞月狗</div>
+                            <div href="#">飞熊TV</div>
+                            <div href="#">游戏魅</div>
+                            <div href="#">电竞虎</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--首页内容 end-->
+    <!--官网底部 start-->
+    <div class="home_bottom"></div>
+    <!--官网底部 end-->
+
+    <!--悬浮标识迷雾之境 start-->
+    <div><img src="./icon_lol/fog.gif" class="fog" /></div>
+    <!--悬浮标识迷雾之境 end-->
+
+</div>
+<script>
+    //分页器
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: {
+            autoplay: {
+                delay: 3000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            }
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: 'custom',
+            renderCustom: function (swiper, current, total) {
+                let paginationHtml = '';
+                let text = ['MSI助威宝典', '大魔王的宝藏', 'MSI小组赛赛程','DWG限定皮肤','2021LPL裁判招募'];
+                
+            }
+        }
+    });
+
+    //鼠标触碰切换
+    part2.addEventListener('mouseover', function (e) {
+        let elem = e.target;
+        if (elem.nodeName === 'SPAN') {
+            let index = elem.tabIndex;
+            let elementList = document.querySelectorAll('.part2-content');
+            for (let i = 0; i < elementList.length; i++) {
+                console.log(elementList[i]);
+                if (elementList[i].getAttribute('tabindex') !== index) {
+                    elementList[i].style = 'display:none;'
+                }
+            }
+            elementList[index].style = 'display:block;'
+        }
+    });
+    part6.addEventListener('mouseover', function (e) {
+        let elem = e.target;
+        if (elem.nodeName === 'SPAN') {
+            let index = elem.tabIndex;
+            let elementList = document.querySelectorAll('.part6-content-video');
+            for (let i = 0; i < elementList.length; i++) {
+                // console.log(elementList[i]);
+                if (elementList[i].getAttribute('tabindex') !== index) {
+                    elementList[i].style = 'display:none;'
+                }
+            }
+            elementList[index].style = 'display:block;'
+        }
+    });
+    act.addEventListener('mouseover', function (e) {
+        let elem = e.target;
+        if (elem.nodeName === 'SPAN') {
+            let index = elem.tabIndex;
+            let elementList = document.querySelectorAll('.act-content');
+            for (let i = 0; i < elementList.length; i++) {
+                console.log(elementList[i]);
+                if (elementList[i].getAttribute('tabindex') !== index) {
+                    elementList[i].style = 'display:none;'
+                }
+            }
+            elementList[index].style = 'display:block;'
+        }
+    });
+    tabs.addEventListener('mouseover', function (e) {
+        let elem = e.target;
+        // console.log(e)
+        if (elem.nodeName === 'SPAN') {
+            let index = elem.tabIndex;
+            let elementList = document.querySelectorAll('.tabs-content');
+            for (let i = 0; i < elementList.length; i++) {
+                console.log(elementList[i]);
+                // console.log(elementList[index].getAttribute('tabindex'))
+                if (elementList[i].getAttribute('tabindex') !== index) {
+                    elementList[i].style = 'display:none'
+                }
+            }
+            elementList[index].style = 'display:block;'
+        }
+    });
+    game.addEventListener('mouseover', function (e) {
+        let elem = e.target;
+        if (elem.nodeName === 'SPAN') {
+            let index = elem.tabIndex;
+            let elementList = document.querySelectorAll('.game-schedule');
+            for (let i = 0; i < elementList.length; i++) {
+                console.log(elementList[i]);
+                if (elementList[i].getAttribute('tabindex') !== index) {
+                    elementList[i].style = 'display:none'
+                }
+            }
+            elementList[index].style = 'display:block;'
+        }
+    });
+    competition.addEventListener('mouseover', function (e) {
+        let elem = e.target;
+        if (elem.nodeName === 'SPAN') {
+            let index = elem.tabIndex;
+            let elementList = document.querySelectorAll('.game-schedule');
+            for (let i = 0; i < elementList.length; i++) {
+                console.log(elementList[i]);
+                if (elementList[i].getAttribute('tabindex') !== index) {
+                    elementList[i].style = 'display:none'
+                }
+            }
+            elementList[index].style = 'display:block;'
+        }
+    });
+
+    //鼠标点击切换
+    $('#hero_style').on('click','li',function(e) {
+        let li = e.currentTarget;
+        let tab = $(li);
+        let index = tab.index();
+        tab.addClass('active');
+        tab.siblings('.active').removeClass('active');
+        debugger;
+    });
+</script>
+</body>
+</html>
